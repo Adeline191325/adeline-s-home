@@ -12,9 +12,9 @@
     :root{--forest:#08482d;--paper:#f5f8ef;--ink:#101410;--mint:#dae7c7;--s:1}
     *{box-sizing:border-box}
     html,body{margin:0;width:100%;height:100%;overflow:hidden;background:var(--paper)}
-    body{font-family:Inter,Arial,sans-serif;color:var(--ink);display:grid;place-items:center}
+    body{font-family:Inter,Arial,sans-serif;color:var(--ink);position:relative}
     button,a{font:inherit}
-    .frame{position:relative;width:1440px;height:1080px;overflow:hidden;background:var(--paper);transform:scale(var(--s));transform-origin:center}
+    .frame{position:absolute;left:50%;top:50%;width:1440px;height:1080px;margin:-540px 0 0 -720px;overflow:hidden;background:var(--paper);transform:scale(var(--s));transform-origin:center}
     .topbar{position:absolute;inset:29px 39px auto 37px;height:42px;display:flex;align-items:center;z-index:20}
     .logo{display:flex;align-items:center;gap:9px;color:var(--forest);font-size:24px;font-weight:500;letter-spacing:-.04em;text-decoration:none}
     .logo svg{width:26px;height:29px;overflow:visible}
@@ -52,7 +52,7 @@
     .cta:hover{transform:rotate(1deg) scale(1.035);background:#063a24}
     .cta:focus-visible,.pill:focus-visible,.nav a:focus-visible,.logo:focus-visible{outline:3px solid #8dbd77;outline-offset:3px}
     @media(max-width:820px){
-      .frame{width:640px;height:900px}
+      .frame{width:640px;height:900px;margin:-450px 0 0 -320px}
       .topbar{inset:28px 28px auto 28px;height:48px}
       .logo{font-size:26px}.logo svg{width:28px;height:31px}
       .nav,.login{display:none}.actions{margin-left:auto}.signup{width:106px;height:46px;font-size:17px}
